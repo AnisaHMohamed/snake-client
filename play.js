@@ -9,23 +9,22 @@ process.stdout.write('\x07');
 
 // // Begin game
 // game.start()
-const net = require('net');
+//const net = require('net');
 
 /**
  * Establishes connection with the game server
  */
-const { connect } = require('./client');
+const { connect } = require('./client')
 
-
+const { setupInput } = require('./input');
 
 console.log('Connecting ...');
-
-connect();
+const connection = connect();
+setupInput(connection);
 /**
  * Setup User Interface
  * Specifically, so that we can handle user input via stdin
  */
-
 
 
 

@@ -22,13 +22,17 @@ const connect = function() {
      host: '10.0.2.15',//local ip address us node local-server.js
      port: 50541
   });
+
   // interpret incoming data as text
 conn.setEncoding('utf8');
- conn.on('connect',(data)=>{
-  console.log("you died", data)
-conn.write("Name: SNK", 'utf8',()=>{
-  console.log("when name is called")
-})
+conn.on('data', (data) => {
+  console.log('Server says: ', data);
+});
+
+ conn.on('connect',() => {
+  console.log("Connected");
+  conn.write("Name: SNK");
+ });
 // conn.write("Move: up", (data)=>{
 //   console.log("Snake moved up")
 // })
@@ -41,8 +45,6 @@ conn.write("Name: SNK", 'utf8',()=>{
 // conn.write("Move: left", (data)=>{
 //   console.log("Snake moved left")
 // })
-
-})
 
 
 
