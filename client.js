@@ -1,5 +1,6 @@
 // #!/usr/bin/env node
 
+
 process.stdout.write('\x07');
 
 // const { Game } = require('./src/Game')
@@ -9,6 +10,8 @@ process.stdout.write('\x07');
 
 // // Begin game
 // game.start()
+const { IP, PORT } = require('./constants')
+
 const net = require('net');
 
 /**
@@ -16,11 +19,12 @@ const net = require('net');
  */
 const connect = function() {
 
+
   const conn = net.createConnection({
     //  host: '172.46.2.204',
 
-     host: '10.0.2.15',//local ip address us node local-server.js
-     port: 50541
+     host: IP,//local ip address us node local-server.js
+     port: PORT
   });
 
   // interpret incoming data as text

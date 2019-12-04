@@ -32,7 +32,11 @@ const handleUserInput= (data, connection)=>{
 
   }else if (data === 'd'){
     connection.write("Move: right")
+  }else if (data === 'z'){
+    connection.write("Say: I'm gonna eat you")
+  }else if (data === 'x'){
+    connection.write("HAHAHHA!")
+  }
 
-      }
 }
 module.exports = {setupInput}
