@@ -3,5 +3,5 @@ const { UserInterface } = require('./src/UserInterface')
 const { RemoteInterface } = require('./src/RemoteInterface')
 const game = new Game(new UserInterface(), new RemoteInterface())
 
-// Begin game
+// Begin game/
 game.start()
