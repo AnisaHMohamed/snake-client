@@ -23,14 +23,26 @@ const connect = function() {
      port: 50541
   });
   // interpret incoming data as text
-  conn.setEncoding('utf8');
+conn.setEncoding('utf8');
  conn.on('connect',(data)=>{
   console.log("you died", data)
 conn.write("Name: SNK", 'utf8',()=>{
-  console.log("hi")
+  console.log("when name is called")
 })
-})
+// conn.write("Move: up", (data)=>{
+//   console.log("Snake moved up")
+// })
+// conn.write("Move: down", (data)=>{
+//   console.log("Snake moved down")
+// })
+// conn.write("Move: right", (data)=>{
+//   console.log("Snake moved right")
+// })
+// conn.write("Move: left", (data)=>{
+//   console.log("Snake moved left")
+// })
 
+})
 
 
 
